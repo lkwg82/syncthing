@@ -5,12 +5,12 @@ go:
 
 install:
    - find -type d | sort
-   - export PATH=$PATH:$HOME/gopath/bin
-   - go run build.go
+#   - export PATH=$PATH:$HOME/gopath/bin
+   - go run build.go install
 
 script:
-   - ./build.sh test-cov
+   - go run build.go test
 
 after_success:
-   - goveralls -coverprofile=coverage.out -service=travis-ci -package=syncthing/syncthing -repotoken="$COVERALLS_TOKEN"
+#   - goveralls -coverprofile=coverage.out -service=travis-ci -package=syncthing/syncthing -repotoken="$COVERALLS_TOKEN"
    - bash <(curl -s https://codecov.io/bash)
