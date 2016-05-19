@@ -10,6 +10,7 @@ install:
    - go run build.go install
 
 script:
+   - go run build.go setup
    - ./build.sh test-cov
    #- go run build.go test
 
