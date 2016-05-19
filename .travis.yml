@@ -4,6 +4,7 @@ go:
    - 1.6
 
 install:
+   - find -type d | sort
    - export PATH=$PATH:$HOME/gopath/bin
    - go run build.go
 
