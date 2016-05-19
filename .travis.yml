@@ -4,15 +4,14 @@ go:
    - 1.6
 
 install:
-   - pwd
-   - find -type d | sort
+   # this is just for forked repos
    - mv $GOPATH/src/github.com/lkwg82 $GOPATH/src/github.com/syncthing
    - cd $GOPATH/src/github.com/syncthing/syncthing
-#   - export PATH=$PATH:$HOME/gopath/bin
    - go run build.go install
 
 script:
-   - go run build.go test
+   - ./build.sh test-cov
+   #- go run build.go test
 
 after_success:
 #   - goveralls -coverprofile=coverage.out -service=travis-ci -package=syncthing/syncthing -repotoken="$COVERALLS_TOKEN"
