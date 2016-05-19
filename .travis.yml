@@ -4,9 +4,9 @@ go:
    - 1.6
 
 install:
-   - ln -s src/github.com/syncthing src/github.com/lkwg82
    - pwd
    - find -type d | sort
+   - ln -s src/github.com/syncthing src/github.com/lkwg82
 #   - export PATH=$PATH:$HOME/gopath/bin
    - go run build.go install
 
