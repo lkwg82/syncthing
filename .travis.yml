@@ -6,7 +6,7 @@ go:
 install:
    - pwd
    - find -type d | sort
-   - ln -s $GOPATH/src/github.com/syncthing $GOPATH/src/github.com/lkwg82
+   - ln -s $GOPATH/src/github.com/lkwg82 $GOPATH/src/github.com/syncthing
 #   - export PATH=$PATH:$HOME/gopath/bin
    - go run build.go install
 
