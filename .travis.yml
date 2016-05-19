@@ -4,6 +4,7 @@ go:
    - 1.6
 
 install:
+   - ln -s src/github.com/syncthing src/github.com/lkwg82
    - pwd
    - find -type d | sort
 #   - export PATH=$PATH:$HOME/gopath/bin
